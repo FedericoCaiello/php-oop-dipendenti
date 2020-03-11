@@ -1,12 +1,10 @@
 <?php
-  require_once __DIR__ . 'classes/dipendenti.php';
-  require_once __DIR__ . 'classes/dirigenti.php';
-  require_once __DIR__ . 'classes/operaio.php';
+  require_once __DIR__ . '/classes/dipendenti.php';
+  require_once __DIR__ . '/classes/dirigenti.php';
+  require_once __DIR__ . '/classes/operaio.php';
 
-  $federico = new Dirigenti('12345', 'Federico', 'Caiello', 'San Giovanni', 'pinco pallo', 30);
-  $federico->indirizzo('San Giovanni');
-  $federico->stipendio(3000);
-  $federico->giorniFerie(30);
+  $federico = new Dirigente('12345', 'Federico', 'Caiello', 'San Giovanni', 'pinco pallo','sdfhsjf', 30);
+
   var_dump($federico);
 
   try {
@@ -15,3 +13,5 @@
     echo 'errore' . $e->getMessage();
   }
   var_dump($federico);
+
+  echo $federico->getBonus();
